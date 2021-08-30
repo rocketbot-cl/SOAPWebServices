@@ -1,0 +1,188 @@
+{
+    "author":"Caleb Cipra",
+    "description": "Módulo para interactuar con SOAP Web Services",
+    "disclaimer":"THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU. SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.",
+    "version":"1.0",
+    "license": "MIT",
+    "homepage":"http://rocketbot.co/",
+    "linux": false,
+    "windows":true,
+    "mac":false,
+    "docker":false,
+    "name": "SOAPWebServices",
+    "dependencies": {
+        "suds-py3": "1.4.4.1"
+    },
+    "title": {
+        "en": "SOAP Web Services",
+        "es": "SOAP Web Services"
+    },
+    "icon": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPGc+DQoJCTxwYXRoIGQ9Ik00NTcsMzMxLjcyM2MtMjUuMTI3LDAtNDYuMzU2LDE2Ljk0My01Mi45MDQsNDBIMzUxdi01OC41NTVoNTQuMjEzYzU4Ljg4MywwLDEwNi43ODctNDcuOTA0LDEwNi43ODctMTA2Ljc4Nw0KCQkJYzAtNDcuMjExLTMxLjMxMi04OC42ODUtNzUuNzY0LTEwMi4xOTNjLTEzLjQzNy01My44MDQtNjIuMDA1LTkyLjM5My0xMTguMjU0LTkyLjM5M2MtMjEuODA1LDAtNDIuNjkzLDUuNjIzLTYxLjEyNywxNi4zNjYNCgkJCWMtMTkuNTIzLTE3Ljg1NC00NS4xMjItMjcuODg0LTcyLjAxOS0yNy44ODRjLTU3LjY5MywwLTEwNC44NDcsNDUuOTkxLTEwNi43MjksMTAzLjIzM0MzMi40NDYsMTE2LjI3MywwLDE1OC4wOCwwLDIwNi4zODENCgkJCWMwLDU4Ljg4Myw0Ny45MDQsMTA2Ljc4NywxMDYuNzg3LDEwNi43ODdIMTYxdjU4LjU1NWgtNTMuMDk2Yy02LjU0Ny0yMy4wNTctMjcuNzc3LTQwLTUyLjkwNC00MGMtMzAuMzI3LDAtNTUsMjQuNjczLTU1LDU1DQoJCQljMCwzMC4zMjcsMjQuNjczLDU1LDU1LDU1YzI1LjEyNywwLDQ2LjM1Ni0xNi45NDMsNTIuOTA0LTQwSDE3NmM4LjI4NCwwLDE1LTYuNzE2LDE1LTE1di03My41NTVoNTB2OTAuNjUxDQoJCQljLTIzLjA1Nyw2LjU0Ny00MCwyNy43NzctNDAsNTIuOTA0YzAsMzAuMzI3LDI0LjY3Myw1NSw1NSw1NWMzMC4zMjcsMCw1NS0yNC42NzMsNTUtNTVjMC0yNS4xMjctMTYuOTQzLTQ2LjM1Ni00MC01Mi45MDR2LTkwLjY1MQ0KCQkJaDUwdjczLjU1NWMwLDguMjg0LDYuNzE2LDE1LDE1LDE1aDY4LjA5NmM2LjU0NywyMy4wNTcsMjcuNzc3LDQwLDUyLjkwNCw0MGMzMC4zMjcsMCw1NS0yNC42NzMsNTUtNTUNCgkJCUM1MTIsMzU2LjM5Niw0ODcuMzI3LDMzMS43MjMsNDU3LDMzMS43MjN6IE01NSw0MTEuNzIzYy0xMy43ODUsMC0yNS0xMS4yMTUtMjUtMjVjMC0xMy43ODUsMTEuMjE1LTI1LDI1LTI1DQoJCQljMTMuNzg1LDAsMjUsMTEuMjE1LDI1LDI1QzgwLDQwMC41MDgsNjguNzg1LDQxMS43MjMsNTUsNDExLjcyM3ogTTI4MSw0NTYuNzIzYzAsMTMuNzg1LTExLjIxNSwyNS0yNSwyNQ0KCQkJYy0xMy43ODUsMC0yNS0xMS4yMTUtMjUtMjVjMC0xMy43ODUsMTEuMjE1LTI1LDI1LTI1QzI2OS43ODUsNDMxLjcyMywyODEsNDQyLjkzOCwyODEsNDU2LjcyM3ogTTEwNi43ODcsMjgzLjE2OA0KCQkJYy00Mi4zNCwwLTc2Ljc4Ny0zNC40NDYtNzYuNzg3LTc2Ljc4N2MwLTM3Ljg0MywyOC4yMDctNzAuNTA2LDY1LjYxLTc1Ljk3NmM3Ljg5My0xLjE1NCwxMy41MDEtOC4yODQsMTIuNzY1LTE2LjIyNg0KCQkJYy0wLjIxNy0yLjM0My0wLjMyNy00LjczNy0wLjMyNy03LjExNmMwLTQyLjMzOSwzNC40NDctNzYuNzg1LDc2Ljc4Ny03Ni43ODVjMjIuNTksMCw0My44OTMsOS44Miw1OC40NDUsMjYuOTQyDQoJCQljNS4xMDksNi4wMTEsMTQsNy4wMzcsMjAuMzQ1LDIuMzQ5YzE1LjczMi0xMS42MjgsMzQuNTI4LTE3Ljc3NCw1NC4zNTYtMTcuNzc0YzQ1LjYyOCwwLDgzLjU3MywzMy40NzksOTAuNjY2LDc3LjAzDQoJCQljMS4wMDMsNi4xNTgsNS43MTQsMTEuMDUyLDExLjgyOSwxMi4yOWMzNS42NDksNy4yMTcsNjEuNTIzLDM4Ljg3LDYxLjUyMyw3NS4yNjZjMCw0Mi4zNDEtMzQuNDQ3LDc2Ljc4Ny03Ni43ODcsNzYuNzg3SDEwNi43ODd6DQoJCQkgTTQ1Nyw0MTEuNzIzYy0xMy43ODUsMC0yNS0xMS4yMTUtMjUtMjVjMC0xMy43ODUsMTEuMjE1LTI1LDI1LTI1YzEzLjc4NSwwLDI1LDExLjIxNSwyNSwyNQ0KCQkJQzQ4Miw0MDAuNTA4LDQ3MC43ODUsNDExLjcyMyw0NTcsNDExLjcyM3oiLz4NCgk8L2c+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg==",
+    "children": [
+        {
+            "en": {
+                "title": "Connects to the SOAP Web Service",
+                "description": "Connects to the SOAP Web Service",
+                "title_options": "Select Option",
+                "options":null
+            },
+            "es": {
+                "title": "Conectar al SOAP Web Service",
+                "description": "Conectar al SOAP Web Service",
+                "title_options": "Seleccione una opción",
+                "options": null
+            },
+            "form": {
+                "css": "modal-lg",
+                "inputs": [
+                    {
+                        "type": "input",
+                        "placeholder": {
+                            "es": "http://www.dneonline.com/calculator.asmx?WSDL",
+                            "en": "http://www.dneonline.com/calculator.asmx?WSDL"
+                        },
+                        "title": {
+                            "es": "URL del SOAP Web Service:",
+                            "en": "SOAP Web Service's URL:"
+                        },
+                        "id": "wsdl",
+                        "css": "col-md-6"
+                    },
+                    {
+                        "type": "input",
+                        "placeholder": {
+                            "es": "usuario",
+                            "en": "username"
+                        },
+                        "title": {
+                            "es": "Nombre de usuario:",
+                            "en": "Username:"
+                        },
+                        "id": "username",
+                        "css": "col-md-6"
+                    },
+                    {
+                        "type": "input",
+                        "placeholder": {
+                            "es": "********",
+                            "en": "********"
+                        },
+                        "title": {
+                            "es": "Password",
+                            "en": "Password:"
+                        },
+                        "id": "password",
+                        "css": "col-md-6"
+                    },
+                    {
+                        "type": "input",
+                        "placeholder": {
+                            "es": "Variable",
+                            "en": "Variable"
+                        },
+                        "title": {
+                            "es": "Asignar resultado a variable:",
+                            "en": "Assign result to variable:"
+                        },
+                        "help": {
+                            "es": "Nombre de variable sin {}",
+                            "en": "Variable name without {}"
+                        },
+                        "remove_vars" : true,
+                        "id": "whereToStore",
+                        "css": "col-md-6"
+                    }
+                ]
+            },
+            "video_youtube": "",
+            "icon": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPGc+DQoJCTxwYXRoIGQ9Ik00NTcsMzMxLjcyM2MtMjUuMTI3LDAtNDYuMzU2LDE2Ljk0My01Mi45MDQsNDBIMzUxdi01OC41NTVoNTQuMjEzYzU4Ljg4MywwLDEwNi43ODctNDcuOTA0LDEwNi43ODctMTA2Ljc4Nw0KCQkJYzAtNDcuMjExLTMxLjMxMi04OC42ODUtNzUuNzY0LTEwMi4xOTNjLTEzLjQzNy01My44MDQtNjIuMDA1LTkyLjM5My0xMTguMjU0LTkyLjM5M2MtMjEuODA1LDAtNDIuNjkzLDUuNjIzLTYxLjEyNywxNi4zNjYNCgkJCWMtMTkuNTIzLTE3Ljg1NC00NS4xMjItMjcuODg0LTcyLjAxOS0yNy44ODRjLTU3LjY5MywwLTEwNC44NDcsNDUuOTkxLTEwNi43MjksMTAzLjIzM0MzMi40NDYsMTE2LjI3MywwLDE1OC4wOCwwLDIwNi4zODENCgkJCWMwLDU4Ljg4Myw0Ny45MDQsMTA2Ljc4NywxMDYuNzg3LDEwNi43ODdIMTYxdjU4LjU1NWgtNTMuMDk2Yy02LjU0Ny0yMy4wNTctMjcuNzc3LTQwLTUyLjkwNC00MGMtMzAuMzI3LDAtNTUsMjQuNjczLTU1LDU1DQoJCQljMCwzMC4zMjcsMjQuNjczLDU1LDU1LDU1YzI1LjEyNywwLDQ2LjM1Ni0xNi45NDMsNTIuOTA0LTQwSDE3NmM4LjI4NCwwLDE1LTYuNzE2LDE1LTE1di03My41NTVoNTB2OTAuNjUxDQoJCQljLTIzLjA1Nyw2LjU0Ny00MCwyNy43NzctNDAsNTIuOTA0YzAsMzAuMzI3LDI0LjY3Myw1NSw1NSw1NWMzMC4zMjcsMCw1NS0yNC42NzMsNTUtNTVjMC0yNS4xMjctMTYuOTQzLTQ2LjM1Ni00MC01Mi45MDR2LTkwLjY1MQ0KCQkJaDUwdjczLjU1NWMwLDguMjg0LDYuNzE2LDE1LDE1LDE1aDY4LjA5NmM2LjU0NywyMy4wNTcsMjcuNzc3LDQwLDUyLjkwNCw0MGMzMC4zMjcsMCw1NS0yNC42NzMsNTUtNTUNCgkJCUM1MTIsMzU2LjM5Niw0ODcuMzI3LDMzMS43MjMsNDU3LDMzMS43MjN6IE01NSw0MTEuNzIzYy0xMy43ODUsMC0yNS0xMS4yMTUtMjUtMjVjMC0xMy43ODUsMTEuMjE1LTI1LDI1LTI1DQoJCQljMTMuNzg1LDAsMjUsMTEuMjE1LDI1LDI1QzgwLDQwMC41MDgsNjguNzg1LDQxMS43MjMsNTUsNDExLjcyM3ogTTI4MSw0NTYuNzIzYzAsMTMuNzg1LTExLjIxNSwyNS0yNSwyNQ0KCQkJYy0xMy43ODUsMC0yNS0xMS4yMTUtMjUtMjVjMC0xMy43ODUsMTEuMjE1LTI1LDI1LTI1QzI2OS43ODUsNDMxLjcyMywyODEsNDQyLjkzOCwyODEsNDU2LjcyM3ogTTEwNi43ODcsMjgzLjE2OA0KCQkJYy00Mi4zNCwwLTc2Ljc4Ny0zNC40NDYtNzYuNzg3LTc2Ljc4N2MwLTM3Ljg0MywyOC4yMDctNzAuNTA2LDY1LjYxLTc1Ljk3NmM3Ljg5My0xLjE1NCwxMy41MDEtOC4yODQsMTIuNzY1LTE2LjIyNg0KCQkJYy0wLjIxNy0yLjM0My0wLjMyNy00LjczNy0wLjMyNy03LjExNmMwLTQyLjMzOSwzNC40NDctNzYuNzg1LDc2Ljc4Ny03Ni43ODVjMjIuNTksMCw0My44OTMsOS44Miw1OC40NDUsMjYuOTQyDQoJCQljNS4xMDksNi4wMTEsMTQsNy4wMzcsMjAuMzQ1LDIuMzQ5YzE1LjczMi0xMS42MjgsMzQuNTI4LTE3Ljc3NCw1NC4zNTYtMTcuNzc0YzQ1LjYyOCwwLDgzLjU3MywzMy40NzksOTAuNjY2LDc3LjAzDQoJCQljMS4wMDMsNi4xNTgsNS43MTQsMTEuMDUyLDExLjgyOSwxMi4yOWMzNS42NDksNy4yMTcsNjEuNTIzLDM4Ljg3LDYxLjUyMyw3NS4yNjZjMCw0Mi4zNDEtMzQuNDQ3LDc2Ljc4Ny03Ni43ODcsNzYuNzg3SDEwNi43ODd6DQoJCQkgTTQ1Nyw0MTEuNzIzYy0xMy43ODUsMC0yNS0xMS4yMTUtMjUtMjVjMC0xMy43ODUsMTEuMjE1LTI1LDI1LTI1YzEzLjc4NSwwLDI1LDExLjIxNSwyNSwyNQ0KCQkJQzQ4Miw0MDAuNTA4LDQ3MC43ODUsNDExLjcyMyw0NTcsNDExLjcyM3oiLz4NCgk8L2c+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg==",
+            "module": "connectTo",
+            "module_name": "SOAPWebServices",
+            "visible": true,
+            "options": false,
+            "father": "module",
+            "group": "scripts",
+            "linux": false,
+            "windows":true,
+            "mac":false,
+            "docker":false
+        },
+        {
+            "en": {
+                "title": "Select method to execute",
+                "description": "Selects a method to execute",
+                "title_options": "Select Option",
+                "options":null
+            },
+            "es": {
+                "title": "Subir imagen para analizar",
+                "description": "Subir una imagen para analizar",
+                "title_options": "Seleccione una opción",
+                "options": null
+            },
+            "form": {
+                "css": "modal-lg",
+                "inputs": [
+                    {
+                        "type": "html",
+                        "title": {
+                            "es": "Seleccione el método que desea usar",
+                            "en": "Select the method that you want to use"
+                        },
+                        "src": "index.html",
+                        "id": "html",
+                        "css": "col-md-12",
+                        "style": "height:100px;"
+                    },
+                    {
+                        "type": "input",
+                        "placeholder": {
+                            "es": "[120, 240]",
+                            "en": "[120, 240]"
+                        },
+                        "title": {
+                            "es": "Parámetros del servicio",
+                            "en": "Service Inputs:"
+                        },
+                        "help": {
+                            "es": "Variables que necesita el servicio contenido en un Array",
+                            "en": "Variables the service needs within an Array"
+                        },
+                        "id": "vars",
+                        "css": "col-md-12"
+                    },
+                    {
+                        "type": "input",
+                        "placeholder": {
+                            "es": "Variable",
+                            "en": "Variable"
+                        },
+                        "title": {
+                            "es": "Asignar resultado a variable:",
+                            "en": "Assign result to variable:"
+                        },
+                        "help": {
+                            "es": "Nombre de variable sin {}",
+                            "en": "Variable name without {}"
+                        },
+                        "remove_vars" : true,
+                        "id": "whereToStore",
+                        "css": "col-md-6"
+                    }
+                ]
+            },
+            "video_youtube": "",
+            "icon": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPGc+DQoJCTxwYXRoIGQ9Ik00NTcsMzMxLjcyM2MtMjUuMTI3LDAtNDYuMzU2LDE2Ljk0My01Mi45MDQsNDBIMzUxdi01OC41NTVoNTQuMjEzYzU4Ljg4MywwLDEwNi43ODctNDcuOTA0LDEwNi43ODctMTA2Ljc4Nw0KCQkJYzAtNDcuMjExLTMxLjMxMi04OC42ODUtNzUuNzY0LTEwMi4xOTNjLTEzLjQzNy01My44MDQtNjIuMDA1LTkyLjM5My0xMTguMjU0LTkyLjM5M2MtMjEuODA1LDAtNDIuNjkzLDUuNjIzLTYxLjEyNywxNi4zNjYNCgkJCWMtMTkuNTIzLTE3Ljg1NC00NS4xMjItMjcuODg0LTcyLjAxOS0yNy44ODRjLTU3LjY5MywwLTEwNC44NDcsNDUuOTkxLTEwNi43MjksMTAzLjIzM0MzMi40NDYsMTE2LjI3MywwLDE1OC4wOCwwLDIwNi4zODENCgkJCWMwLDU4Ljg4Myw0Ny45MDQsMTA2Ljc4NywxMDYuNzg3LDEwNi43ODdIMTYxdjU4LjU1NWgtNTMuMDk2Yy02LjU0Ny0yMy4wNTctMjcuNzc3LTQwLTUyLjkwNC00MGMtMzAuMzI3LDAtNTUsMjQuNjczLTU1LDU1DQoJCQljMCwzMC4zMjcsMjQuNjczLDU1LDU1LDU1YzI1LjEyNywwLDQ2LjM1Ni0xNi45NDMsNTIuOTA0LTQwSDE3NmM4LjI4NCwwLDE1LTYuNzE2LDE1LTE1di03My41NTVoNTB2OTAuNjUxDQoJCQljLTIzLjA1Nyw2LjU0Ny00MCwyNy43NzctNDAsNTIuOTA0YzAsMzAuMzI3LDI0LjY3Myw1NSw1NSw1NWMzMC4zMjcsMCw1NS0yNC42NzMsNTUtNTVjMC0yNS4xMjctMTYuOTQzLTQ2LjM1Ni00MC01Mi45MDR2LTkwLjY1MQ0KCQkJaDUwdjczLjU1NWMwLDguMjg0LDYuNzE2LDE1LDE1LDE1aDY4LjA5NmM2LjU0NywyMy4wNTcsMjcuNzc3LDQwLDUyLjkwNCw0MGMzMC4zMjcsMCw1NS0yNC42NzMsNTUtNTUNCgkJCUM1MTIsMzU2LjM5Niw0ODcuMzI3LDMzMS43MjMsNDU3LDMzMS43MjN6IE01NSw0MTEuNzIzYy0xMy43ODUsMC0yNS0xMS4yMTUtMjUtMjVjMC0xMy43ODUsMTEuMjE1LTI1LDI1LTI1DQoJCQljMTMuNzg1LDAsMjUsMTEuMjE1LDI1LDI1QzgwLDQwMC41MDgsNjguNzg1LDQxMS43MjMsNTUsNDExLjcyM3ogTTI4MSw0NTYuNzIzYzAsMTMuNzg1LTExLjIxNSwyNS0yNSwyNQ0KCQkJYy0xMy43ODUsMC0yNS0xMS4yMTUtMjUtMjVjMC0xMy43ODUsMTEuMjE1LTI1LDI1LTI1QzI2OS43ODUsNDMxLjcyMywyODEsNDQyLjkzOCwyODEsNDU2LjcyM3ogTTEwNi43ODcsMjgzLjE2OA0KCQkJYy00Mi4zNCwwLTc2Ljc4Ny0zNC40NDYtNzYuNzg3LTc2Ljc4N2MwLTM3Ljg0MywyOC4yMDctNzAuNTA2LDY1LjYxLTc1Ljk3NmM3Ljg5My0xLjE1NCwxMy41MDEtOC4yODQsMTIuNzY1LTE2LjIyNg0KCQkJYy0wLjIxNy0yLjM0My0wLjMyNy00LjczNy0wLjMyNy03LjExNmMwLTQyLjMzOSwzNC40NDctNzYuNzg1LDc2Ljc4Ny03Ni43ODVjMjIuNTksMCw0My44OTMsOS44Miw1OC40NDUsMjYuOTQyDQoJCQljNS4xMDksNi4wMTEsMTQsNy4wMzcsMjAuMzQ1LDIuMzQ5YzE1LjczMi0xMS42MjgsMzQuNTI4LTE3Ljc3NCw1NC4zNTYtMTcuNzc0YzQ1LjYyOCwwLDgzLjU3MywzMy40NzksOTAuNjY2LDc3LjAzDQoJCQljMS4wMDMsNi4xNTgsNS43MTQsMTEuMDUyLDExLjgyOSwxMi4yOWMzNS42NDksNy4yMTcsNjEuNTIzLDM4Ljg3LDYxLjUyMyw3NS4yNjZjMCw0Mi4zNDEtMzQuNDQ3LDc2Ljc4Ny03Ni43ODcsNzYuNzg3SDEwNi43ODd6DQoJCQkgTTQ1Nyw0MTEuNzIzYy0xMy43ODUsMC0yNS0xMS4yMTUtMjUtMjVjMC0xMy43ODUsMTEuMjE1LTI1LDI1LTI1YzEzLjc4NSwwLDI1LDExLjIxNSwyNSwyNQ0KCQkJQzQ4Miw0MDAuNTA4LDQ3MC43ODUsNDExLjcyMyw0NTcsNDExLjcyM3oiLz4NCgk8L2c+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg==",
+            "module": "sendData",
+            "module_name": "SOAPWebServices",
+            "visible": true,
+            "options": false,
+            "father": "module",
+            "group": "scripts",
+            "linux": false,
+            "windows":true,
+            "mac":false,
+            "docker":false
+        }
+    ]
+}
