@@ -1,6 +1,6 @@
 # SOAPWebServices
 
-Module to interact with SOAP web services.
+Module to interact with SOAP web services. Connect, execute methods and receive data from Web Services.
 
 ----
 
