@@ -37,5 +37,7 @@ class SoapObject:
     def serviceExe(self, serviceName, parameters):
         ejecucionServicio = f"self.client.service.{serviceName}(*{parameters})"
         result = eval(ejecucionServicio)
+        print(dir(result))
+        print(type(result))
         # result = getattr(self.client.service, serviceName)(*parameters)
         return result
