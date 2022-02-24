@@ -24,6 +24,8 @@ Para instalar librerias se debe ingresar por terminal a la carpeta "libs"
 
 """
 
+import json
+from operator import attrgetter
 import os
 import sys
 
@@ -31,6 +33,18 @@ base_path = tmp_global_obj["basepath"]
 cur_path = base_path + 'modules' + os.sep + 'SOAPWebServices' + os.sep + 'libs' + os.sep
 if cur_path not in sys.path:
     sys.path.append(cur_path)
+
+
+def convert(J):
+    global convert
+    if hasattr(J, "__keylist__"):
+        J = {key: convert(value) for key, value in dict(J).items()}
+            
+    if hasattr(J, "append"):
+        J = [convert(data) for data in J]
+        
+    return J
+
 
 from soapObject import SoapObject
 
@@ -80,10 +94,10 @@ try:
         
         variables = GetParams("vars")
         
-        result = clientSoapObject.serviceExe(serviceName, variables)
+        resultSoap = clientSoapObject.serviceExe(serviceName, variables)
 
         whereToStore = GetParams("whereToStore")
-        SetVar(whereToStore, result)
+        SetVar(whereToStore, convert(resultSoap))
 
 except Exception as e:
     print("\x1B[" + "31;40mAn error occurred\x1B[" + "0m")
