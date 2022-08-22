@@ -1,25 +1,23 @@
 # SOAP Web Services
   
-Module to excecute methods from SOAP Web Services  
+Module to excecute methods from SOAP Web Services 
 
 *Read this in other languages: [English](README.md), [Español](README.es.md), [Portuguese](README.pr.md).*
 
-## How to install this module
+## Como instalar este módulo
   
-__Download__ and __install__ the content in 'modules' folder in Rocketbot path  
+__Descarga__ e __instala__ el contenido en la carpeta 'modules' en la ruta de Rocketbot.  
 
 
 
 ## Overview
 
 
-1. Connects to the SOAP Web Service  
-Connects to the SOAP Web Service
+1. Conectar al SOAP Web Service  
+Conectar al SOAP Web Service
 
-2. Select method to execute  
-Selects a method to execute  
-
-
+2. Ejecutar método  
+Ejecutar método  
 
 
 ----
