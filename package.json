@@ -75,6 +75,31 @@
                         "css": "col-md-6"
                     },
                     {
+                        "type": "checkbox",
+                        "placeholder": {
+                            "es": "False",
+                            "en": "False",
+                            "pr": "False"
+                        },
+                        "title": {
+                            "es": "Login alternativo",
+                            "en": "Alternate Login",
+                            "pr": "Login alternativo"
+                        },
+                        "description": {
+                            "es": "Iniciar sesión con otro método en caso de que el login por defecto no funcione",
+                            "en": "Login with another method in case the default login does not work",
+                            "pr": "Faça login com outro método caso o login padrão não funcione"
+                        },
+                        "help": {
+                            "es": "Marcar si el inicio de sesión por defecto no funciona",
+                            "en": "Check if default login doesn't work",
+                            "pr": "Marque se o login padrão não funcionar"
+                        },
+                        "id": "checkLogin",
+                        "css": "col-md-6"
+                    },
+                    {
                         "type": "input",
                         "placeholder": {
                             "es": "Variable",
