@@ -65,8 +65,8 @@ try:
             username = ''
         if not password:
             password = ''
-        
-        if checkLogin == 'None' or checkLogin == 'False':
+            
+        if checkLogin != 'True':
             clientSoapObject = SoapObject(wsdl, username, password)
         else:
             clientSoapObject = SoapObjectNew(wsdl, username, password)
