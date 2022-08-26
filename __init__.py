@@ -46,7 +46,7 @@ def convert(J):
     return J
 
 
-from soapObject import SoapObject
+from soapObject import SoapObject, SoapObjectNew
 
 global clientSoapObject
 
@@ -59,13 +59,17 @@ try:
         username = GetParams("username")
         password = GetParams("password")
         wsdl = GetParams("wsdl")
+        checkLogin = GetParams("checkLogin")
 
         if not username:
             username = ''
         if not password:
             password = ''
-        
-        clientSoapObject = SoapObject(wsdl, username, password)
+            
+        if checkLogin != 'True':
+            clientSoapObject = SoapObject(wsdl, username, password)
+        else:
+            clientSoapObject = SoapObjectNew(wsdl, username, password)
 
         whereToStore = GetParams("whereToStore")
         
