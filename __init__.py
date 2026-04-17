@@ -2,7 +2,7 @@
 """
 Base para desarrollo de modulos externos.
 Para obtener el modulo/Funcion que se esta llamando:
-     GetParams("module")
+    GetParams("module")
 
 Para obtener las variables enviadas desde formulario/comando Rocketbot:
     var = GetParams(variable)
@@ -94,14 +94,27 @@ try:
     if (module == "sendData"):
 
         iframe = GetParams("iframe")
-        serviceName = eval(iframe)["serviceName"]
-        
-        variables = GetParams("vars")
-        
-        resultSoap = clientSoapObject.serviceExe(serviceName, variables)
+        serviceName = eval(iframe).get("serviceName")
+
+        if not serviceName or serviceName == "---- Select Option ----":
+            raise Exception("You must select a valid SOAP method")
+
+        if "clientSoapObject" not in globals() or not getattr(clientSoapObject, "client", None):
+            raise Exception("SOAP client not initialized. Run connectTo first")
 
         whereToStore = GetParams("whereToStore")
-        SetVar(whereToStore, convert(resultSoap))
+        variables = GetParams("vars")
+
+        try:
+            resultSoap = clientSoapObject.serviceExe(serviceName, variables)
+        except Exception:
+            SetVar(whereToStore, False)
+            raise
+
+        if resultSoap is None:
+            SetVar(whereToStore, True)
+        else:
+            SetVar(whereToStore, convert(resultSoap))
 
 except Exception as e:
     print("\x1B[" + "31;40mAn error occurred\x1B[" + "0m")
